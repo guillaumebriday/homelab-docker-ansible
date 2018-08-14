@@ -30,6 +30,12 @@ Then run the playbook :
 $ ansible-playbook -i hosts playbook.yml
 ```
 
+If you want to run the playbook locally, set the address in the hosts file:
+```ini
+[webservers]
+localhost ansible_connection=local
+```
+
 ## Contributing
 
 Do not hesitate to contribute to the project by adapting or adding features ! Bug reports or pull requests are welcome.
