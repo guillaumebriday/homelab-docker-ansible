@@ -1,0 +1,5 @@
+---
+- name: Provisionning webservers group
+  hosts: webservers
+  roles:
+    - apps
