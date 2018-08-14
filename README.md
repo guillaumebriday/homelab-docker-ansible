@@ -10,6 +10,7 @@ This is an [Ansible](https://www.ansible.com) playbook to install and configure 
 
 This playbook is designed to install a bunch of useful apps :
 
++ [Jackett](https://github.com/Jackett/Jackett)
 + [Radarr](https://github.com/Radarr/Radarr)
 + [Sonarr](https://github.com/Sonarr/Sonarr)
 + [Tautulli](https://github.com/Tautulli/Tautulli)

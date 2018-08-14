@@ -11,7 +11,7 @@
     networks:
       - name: wekan
     ports:
-      - 8080:8080
+      - "8080:8080"
     env:
       ROOT_URL: http://localhost:8080
       MONGO_URL: mongodb://mongo
@@ -40,4 +40,28 @@
     image: tautulli/tautulli
     restart_policy: unless-stopped
     ports:
-      - 8181:8181
+      - "8181:8181"
+
+- name: Create the Jackett container
+  docker_container:
+    name: jackett
+    image: linuxserver/jackett
+    restart_policy: unless-stopped
+    ports:
+      - "9117:9117"
+
+- name: Create the Sonarr container
+  docker_container:
+    name: sonarr
+    image: linuxserver/sonarr
+    restart_policy: unless-stopped
+    ports:
+      - "8989:8989"
+
+- name: Create the Radarr container
+  docker_container:
+    name: radarr
+    image: linuxserver/radarr
+    restart_policy: unless-stopped
+    ports:
+      - "7878:7878"
