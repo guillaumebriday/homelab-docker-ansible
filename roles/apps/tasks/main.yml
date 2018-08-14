@@ -33,3 +33,11 @@
       - /var/run/docker.sock:/var/run/docker.sock
     # Update containers every monday at 5:00 a.m.
     command: --schedule "0 0 5 * * 1"
+
+- name: Create the Tautulli container
+  docker_container:
+    name: tautulli
+    image: tautulli/tautulli
+    restart_policy: unless-stopped
+    ports:
+      - 8181:8181
