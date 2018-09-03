@@ -15,7 +15,6 @@ This playbook is designed to install a bunch of useful apps :
 + [Sonarr](https://github.com/Sonarr/Sonarr)
 + [Tautulli](https://github.com/Tautulli/Tautulli)
 + [Watchtower](https://github.com/v2tec/watchtower)
-+ [Wekan](https://github.com/wekan/wekan)
 
 ## Installing on production
 
