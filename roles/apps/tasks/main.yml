@@ -1,4 +1,14 @@
 ---
+- name: Ensures config directory exists
+  file:
+    path: "/volume1/docker/{{ item }}/config"
+    state: directory
+  with_items:
+     - jackett
+     - radarr
+     - sonarr
+     - tautulli
+
 - name: Create the Watchtower container
   docker_container:
     name: watchtower
