@@ -9,6 +9,7 @@
      - radarr
      - sonarr
      - tautulli
+     - transmission
 
 - name: Create the Watchtower container
   docker_container:
@@ -36,6 +37,18 @@
       - /volume1/docker/tautulli/config:/config
       - /volume1/Plex/Library/Application Support/Plex Media Server/Logs:/logs:ro
 
+- name: Create the Transmission container
+  docker_container:
+    name: transmission
+    image: linuxserver/transmission
+    restart_policy: unless-stopped
+    ports:
+      - "9091:9091"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /volume1/docker/transmission/config:/config
+      - /volume1/Downloads/bittorrent:/downloads
+
 - name: Create the Jackett container
   docker_container:
     name: jackett
@@ -58,6 +71,7 @@
       - /etc/localtime:/etc/localtime:ro
       - /volume1/docker/sonarr/config:/config
       - /volume1/Downloads/TV Shows:/tv
+      - /volume1/Downloads/bittorrent:/downloads
 
 - name: Create the Radarr container
   docker_container:
@@ -70,6 +84,7 @@
       - /etc/localtime:/etc/localtime:ro
       - /volume1/docker/radarr/config:/config
       - /volume1/Downloads/Movies:/movies
+      - /volume1/Downloads/bittorrent:/downloads
 
 - name: Create the Ombi container
   docker_container:

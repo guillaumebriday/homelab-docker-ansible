@@ -15,6 +15,7 @@ This playbook is designed to install a bunch of useful apps :
 + [Radarr](https://github.com/Radarr/Radarr)
 + [Sonarr](https://github.com/Sonarr/Sonarr)
 + [Tautulli](https://github.com/Tautulli/Tautulli)
++ [Transmission](https://transmissionbt.com/)
 + [Watchtower](https://github.com/v2tec/watchtower)
 
 ## Installing on production
