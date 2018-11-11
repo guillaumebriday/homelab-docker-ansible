@@ -4,3 +4,9 @@
   roles:
     - python
     - apps
+    - transmission
+    - tautulli
+    - sonarr
+    - radarr
+    - ombi
+    - jackett

@@ -1,0 +1,12 @@
+---
+- name: Create the Transmission container
+  docker_container:
+    name: transmission
+    image: linuxserver/transmission
+    restart_policy: unless-stopped
+    ports:
+      - "9091:9091"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /volume1/docker/transmission/config:/config
+      - /volume1/Downloads/bittorrent:/downloads

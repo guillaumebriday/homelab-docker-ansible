@@ -1,0 +1,12 @@
+---
+- name: Create the Tautulli container
+  docker_container:
+    name: tautulli
+    image: linuxserver/tautulli
+    restart_policy: unless-stopped
+    ports:
+      - "8181:8181"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /volume1/docker/tautulli/config:/config
+      - /volume1/Plex/Library/Application Support/Plex Media Server/Logs:/logs:ro

@@ -1,0 +1,13 @@
+---
+- name: Create the Radarr container
+  docker_container:
+    name: radarr
+    image: linuxserver/radarr
+    restart_policy: unless-stopped
+    ports:
+      - "7878:7878"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /volume1/docker/radarr/config:/config
+      - /volume1/Downloads/Movies:/movies
+      - /volume1/Downloads/bittorrent:/downloads

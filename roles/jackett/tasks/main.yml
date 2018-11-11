@@ -1,0 +1,11 @@
+---
+- name: Create the Jackett container
+  docker_container:
+    name: jackett
+    image: linuxserver/jackett
+    restart_policy: unless-stopped
+    ports:
+      - "9117:9117"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /volume1/docker/jackett/config:/config
