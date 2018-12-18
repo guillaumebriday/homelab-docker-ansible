@@ -6,6 +6,7 @@
   loop:
      - jackett
      - ombi
+     - organizr
      - radarr
      - sonarr
      - tautulli
@@ -19,8 +20,9 @@
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /etc/localtime:/etc/localtime:ro
-    # Update containers every monday at 5:00 a.m.
-    command: --schedule "0 0 5 * * 1" --cleanup
+    # Update containers every day at 5:00 a.m.
+    command: --schedule "0 0 5 * * *" --cleanup
     env:
       WATCHTOWER_NOTIFICATIONS: "{{ WATCHTOWER_NOTIFICATIONS }}"
       WATCHTOWER_NOTIFICATION_SLACK_HOOK_URL: "{{ WATCHTOWER_NOTIFICATION_SLACK_HOOK_URL }}"
+      WATCHTOWER_NOTIFICATION_SLACK_IDENTIFIER: "{{ WATCHTOWER_NOTIFICATION_SLACK_IDENTIFIER }}"
