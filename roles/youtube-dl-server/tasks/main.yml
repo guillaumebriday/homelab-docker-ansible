@@ -1,0 +1,11 @@
+---
+- name: Create the youtube-dl-server container
+  docker_container:
+    name: youtube-dl-server
+    image: kmb32123/youtube-dl-server
+    restart_policy: unless-stopped
+    ports:
+      - "32000:8080"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /volume1/Downloads/Youtube:/youtube-dl

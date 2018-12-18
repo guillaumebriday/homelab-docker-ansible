@@ -12,11 +12,13 @@ This playbook is designed to install a bunch of useful apps :
 
 + [Jackett](https://github.com/Jackett/Jackett)
 + [Ombi](https://github.com/tidusjar/Ombi)
++ [Organizr](https://github.com/causefx/Organizr)
 + [Radarr](https://github.com/Radarr/Radarr)
 + [Sonarr](https://github.com/Sonarr/Sonarr)
 + [Tautulli](https://github.com/Tautulli/Tautulli)
 + [Transmission](https://transmissionbt.com/)
 + [Watchtower](https://github.com/v2tec/watchtower)
++ [Youtube-dl-server](https://github.com/manbearwiz/youtube-dl-server)
 
 ## Installing on production
 

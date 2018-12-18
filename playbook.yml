@@ -4,9 +4,11 @@
   roles:
     - python
     - apps
-    - transmission
-    - tautulli
-    - sonarr
-    - radarr
-    - ombi
     - jackett
+    - ombi
+    - organizr
+    - radarr
+    - sonarr
+    - tautulli
+    - transmission
+    - youtube-dl-server

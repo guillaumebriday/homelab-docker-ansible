@@ -1,0 +1,11 @@
+---
+- name: Create the Organizr container
+  docker_container:
+    name: organizr
+    image: lsiocommunity/organizr
+    restart_policy: unless-stopped
+    ports:
+      - "8282:80"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /volume1/docker/organizr/config:/config
