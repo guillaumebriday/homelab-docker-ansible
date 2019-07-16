@@ -4,6 +4,7 @@
     name: radarr
     image: linuxserver/radarr
     restart_policy: unless-stopped
+    pull: true
     ports:
       - "7878:7878"
     volumes:

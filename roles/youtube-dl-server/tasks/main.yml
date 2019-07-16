@@ -4,6 +4,7 @@
     name: youtube-dl-server
     image: kmb32123/youtube-dl-server
     restart_policy: unless-stopped
+    pull: true
     ports:
       - "32000:8080"
     volumes:

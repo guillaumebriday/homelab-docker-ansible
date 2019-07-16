@@ -4,6 +4,7 @@
     name: tautulli
     image: linuxserver/tautulli
     restart_policy: unless-stopped
+    pull: true
     ports:
       - "8181:8181"
     volumes:

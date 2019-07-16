@@ -17,6 +17,7 @@
     name: watchtower
     image: v2tec/watchtower
     restart_policy: unless-stopped
+    pull: true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /etc/localtime:/etc/localtime:ro

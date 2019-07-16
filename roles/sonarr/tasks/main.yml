@@ -4,6 +4,7 @@
     name: sonarr
     image: linuxserver/sonarr
     restart_policy: unless-stopped
+    pull: true
     ports:
       - "8989:8989"
     volumes:

@@ -4,6 +4,7 @@
     name: ombi
     image: linuxserver/ombi
     restart_policy: unless-stopped
+    pull: true
     ports:
       - "3579:3579"
     volumes:

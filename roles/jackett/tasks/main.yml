@@ -4,6 +4,7 @@
     name: jackett
     image: linuxserver/jackett
     restart_policy: unless-stopped
+    pull: true
     ports:
       - "9117:9117"
     volumes:

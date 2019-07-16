@@ -4,6 +4,7 @@
     name: transmission
     image: linuxserver/transmission
     restart_policy: unless-stopped
+    pull: true
     ports:
       - "9091:9091"
     volumes:

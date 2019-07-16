@@ -4,6 +4,7 @@
     name: organizr
     image: lsiocommunity/organizr
     restart_policy: unless-stopped
+    pull: true
     ports:
       - "8282:80"
     volumes:
