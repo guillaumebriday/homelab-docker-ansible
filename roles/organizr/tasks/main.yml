@@ -2,7 +2,7 @@
 - name: Create the Organizr container
   docker_container:
     name: organizr
-    image: lsiocommunity/organizr
+    image: linuxserver/organizr
     restart_policy: unless-stopped
     pull: true
     ports:
