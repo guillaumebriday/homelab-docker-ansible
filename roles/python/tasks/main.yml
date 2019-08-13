@@ -3,3 +3,7 @@
   easy_install:
     name: pip
     state: latest
+
+- name: Add the Python client for Docker
+  pip:
+    name: docker-py
