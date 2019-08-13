@@ -2,11 +2,12 @@
 - name: Provisionning webservers group
   hosts: webservers
   roles:
-    - python
     - apps
     - jackett
     - ombi
     - organizr
+    - ouroboros
+    - python
     - radarr
     - sonarr
     - tautulli
