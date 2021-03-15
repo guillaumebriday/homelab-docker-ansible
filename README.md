@@ -13,6 +13,7 @@ This playbook is designed to install a bunch of useful apps :
 + [Tautulli](https://tautulli.com/)
 + [Ouroboros](https://github.com/pyouroboros/ouroboros)
 + [Youtube-dl-server](https://github.com/manbearwiz/youtube-dl-server)
++ [Pi-hole](https://pi-hole.net/)
 
 ## Installing on production
 

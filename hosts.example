@@ -5,3 +5,4 @@ example.com
 ansible_python_interpreter=/usr/bin/python3
 
 NOTIFICATION_SLACK_HOOK_URL=https://hooks.slack.com/services/xxx/yyyyyyyyyyyyyyy
+PIHOLE_PASSWORD=

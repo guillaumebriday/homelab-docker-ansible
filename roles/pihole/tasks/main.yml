@@ -1,0 +1,30 @@
+---
+- name: Ensures config directory exists
+  file:
+    path: "/volume1/docker/pihole/{{ item }}"
+    state: directory
+  loop:
+     - etc-pihole
+     - etc-dnsmasq.d
+
+- name: Create the Pi-Hole container
+  docker_container:
+    name: pihole
+    image: pihole/pihole:latest
+    restart_policy: unless-stopped
+    pull: true
+    network_mode: host
+    ports:
+      - "8080:8080"
+    volumes:
+      - /volume1/docker/pihole/etc-pihole:/etc/pihole/
+      - /volume1/docker/pihole/etc-dnsmasq.d:/etc/dnsmasq.d/
+      - /etc/localtime:/etc/localtime:ro
+    env:
+      TZ: "Europe/Paris"
+      WEB_PORT: "8080"
+      DNSMASQ_LISTENING: "local"
+      ServerIP: "192.168.1.22"
+      WEBPASSWORD: "{{ PIHOLE_PASSWORD }}"
+      DNS1: "80.67.169.12"
+      DNS2: "80.67.169.40"
