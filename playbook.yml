@@ -2,14 +2,7 @@
 - name: Provisionning webservers group
   hosts: webservers
   roles:
-    - apps
-    - jackett
-    - ombi
-    - organizr
     - ouroboros
     - python
-    - radarr
-    - sonarr
     - tautulli
-    - transmission
     - youtube-dl-server
