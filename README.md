@@ -20,13 +20,13 @@ This playbook is designed to install a bunch of useful apps :
 Copy the hosts example file and change the values to your needs :
 
 ```bash
-$ cp hosts.example hosts
+$ cp hosts.ini.example hosts.ini
 ```
 
 Then run the playbook :
 
 ```bash
-$ ansible-playbook -i hosts playbook.yml
+$ ansible-playbook -i hosts.ini playbook.yml
 ```
 
 If you want to run the playbook locally, set the address in the hosts file:
