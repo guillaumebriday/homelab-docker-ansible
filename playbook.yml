@@ -2,8 +2,8 @@
 - name: Provisionning webservers group
   hosts: webservers
   roles:
-    - ouroboros
     - python
+    - watchtower
     - tautulli
     - youtube-dl-server
     - pihole

@@ -1,0 +1,15 @@
+---
+- name: Create the Watchtower container
+  docker_container:
+    name: watchtower
+    image: containrrr/watchtower
+    restart_policy: unless-stopped
+    pull: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/localtime:/etc/localtime:ro
+    env:
+      WATCHTOWER_SCHEDULE: "{{ WATCHTOWER_SCHEDULE }}"
+      WATCHTOWER_CLEANUP: "true"
+      WATCHTOWER_NOTIFICATIONS: "slack"
+      WATCHTOWER_NOTIFICATION_SLACK_HOOK_URL: "{{ NOTIFICATION_SLACK_HOOK_URL }}"

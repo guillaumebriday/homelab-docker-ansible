@@ -11,7 +11,7 @@ This is an [Ansible](https://www.ansible.com) playbook to install and configure 
 This playbook is designed to install a bunch of useful apps :
 
 + [Tautulli](https://tautulli.com/)
-+ [Ouroboros](https://github.com/pyouroboros/ouroboros)
++ [Watchtower](https://github.com/containrrr/watchtower/)
 + [Youtube-dl-server](https://github.com/manbearwiz/youtube-dl-server)
 + [Pi-hole](https://pi-hole.net/)
 
