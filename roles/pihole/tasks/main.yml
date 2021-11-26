@@ -10,7 +10,7 @@
 - name: Create the Pi-Hole container
   docker_container:
     name: pihole
-    image: pihole/pihole:v5.8
+    image: pihole/pihole
     restart_policy: unless-stopped
     pull: true
     network_mode: host
